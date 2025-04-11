@@ -9,7 +9,10 @@ app.use(cors());
 app.use(express.json());
 
 app.use('/api/auth', authRoutes); // ← toutes les routes d'auth seront accessibles via /api/auth
-
+const courseRoutes = require('./routes/courseRoutes');
+app.use('/api/courses', courseRoutes);
+const categoryRoutes = require('./routes/categoryRoutes');
+app.use('/api/categories', categoryRoutes);
 app.get('/', (req, res) => {
   res.send('API Ajin9raw fonctionne 🎉');
 });
