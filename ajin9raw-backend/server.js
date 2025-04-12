@@ -3,15 +3,18 @@ const cors = require('cors');
 require('dotenv').config();
 
 const authRoutes = require('./routes/authRoutes');
+const aiRoutes = require('./routes/aiRoutes');
 
 const app = express();
+
 app.use(cors());
 app.use(express.json());
 
-app.use('/api/auth', authRoutes); // ← toutes les routes d'auth seront accessibles via /api/auth
+app.use('/api/auth', authRoutes);
+app.use('/api/ai', aiRoutes);
 
 app.get('/', (req, res) => {
-  res.send('API Ajin9raw fonctionne 🎉');
+  res.send('API Ajin9raw fonctionne 🧠');
 });
 
 app.listen(3000, () => {
