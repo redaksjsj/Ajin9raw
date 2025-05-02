@@ -1,25 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Button from "src/components/Button";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center">
+      <h1 className="text-4xl font-bold text-blue-600">Bienvenue Yakout 💙</h1>
+      <p className="text-lg text-gray-700 mt-4">Tu as bien lancé ton projet Ajin9raw 🚀</p>
+      <Button label="Commencer" onClick={() => alert('Bienvenue !')} />
 
-export default App;
+    </div>
+    
+  );
+  <Footer />
+}
